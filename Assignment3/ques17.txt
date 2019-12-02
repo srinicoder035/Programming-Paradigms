@@ -1,0 +1,22 @@
+Let us consider the language C++
+
+Let us assume the integer data type has 32 bits(4 bytes).
+
+For any n bit representation the max value that can be represented is 2^n -1. 
+
+In that case the integer data type can hold values upto (2^32)-1.
+
+The range for this integer datatype is from -(2^31) to (2^31)-1.
+
+If we consider unsigned integer datatype the range is from 0 to (2^32)-1.
+
+In both the cases of signed and unsigned integer the datatype can hold only upto factorial of 12. 
+Beyond 12 it cannot hold values.
+
+In that case the integer datatype cannot hold those values.
+In case of unsigned integer some garbage value within the range gets thrown up.
+In case of signed integer negative value or some positive garbage value get thrown up.
+
+Incase of long long int, we can compute upto factorial of 20.
+
+If we use Python we can compute factorial of any number because the integer in python can be arbitrarily large.

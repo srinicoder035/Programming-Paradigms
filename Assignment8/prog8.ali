@@ -1,0 +1,65 @@
+V "GNAT Lib v4.9"
+M P W=b
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_LOOPS
+RV NO_RECURSION
+RV SPARK_05
+
+U queens%b		prog8.adb		d0fdcbeb NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-finali.ads		20111121113555 52ecdc1b
+D a-ioexce.ads		20140225151544 e4a01f64
+D a-stream.ads		20140122164720 1a984740
+D a-tags.ads		20111212115430 6c0509d0
+D a-textio.ads		20140129155348 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20140225151838 69adb1b9
+D i-cstrea.ads		20130412125801 8128536b
+D prog8.adb		20190303070707 e8903e3f
+D system.ads		20160213141829 90249111
+D s-crtl.ads		20140225151544 840e6817
+D s-exctab.ads		20140225151139 54135002
+D s-ficobl.ads		20120709130952 55a71d43
+D s-finmas.ads		20140225151139 814daec4
+D s-finroo.ads		20120426095924 4ff27390
+D s-imgint.ads		20090409150019 02dbe0c2
+D s-parame.ads		20140225151139 ab8cb46a
+D s-pooglo.ads		20110804083314 542f33d0
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-stopoo.ads		20131010103753 b16154c2
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+D s-wchcon.ads		20140225151139 1b7d22d2
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r24
+X 7 a-textio.ads
+49K13*Text_IO 471e16 11|1w10 1r28
+242U14*Put 11|36s7 39s13 41s13 43s13
+263U14*Put_Line 11|46s7 48s4
+X 11 prog8.adb
+2U11*Queens 2b11 49l5 49t11
+3a4 Board(boolean) 7r16 9r34 11r39 20r18 22m13 26m13 35r13 37r16 38r13
+4V13 Test{boolean} 4b13 4>19 4>24 17l8 17t12 21s13
+4i19 Row{integer} 7r23 9r17 9r41 11r17 11r46
+4i24 Column{integer} 6r19 9r50 11r55
+6i11 J{integer} 7r28 9r23 9r47 9r59 11r23 11r52 11r64
+18V13 Fill{boolean} 18b13 18>19 23s35 30l8 30t12 32s11
+18i19 Column{integer} 21r24 22r25 23r16 23r41 26r25
+20i11 Row{integer} 21r19 22r20 26r20
+35i8 I{integer} 36r31 38r20 40r17
+37i11 J{integer} 38r23 40r21
+

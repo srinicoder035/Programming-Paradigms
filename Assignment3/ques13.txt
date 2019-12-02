@@ -1,0 +1,23 @@
+Type-checking and type requirements are much tighter in Java.
+For example:
+1. Conditional expressions can be only boolean, not integral.
+2. The result of an expression must be used.
+
+Reason
+
+All conditional expressions are boolean by default.
+However,some languages like C,C++ allows us to use  numerical expressions or pointers as conditional expressions.
+When a non-boolean expression is used as a conditional expression, they are implicitly converted into comparisions with zero.
+This feature is not supported in many high level languages like Java and C# because it does not produce a clear code.
+Furthermore, it results in another set of comparisons which slows down the rate of execution due to type conversions.
+
+Example
+1.To check variable is equal to zero
+
+if(i == 0){
+}
+
+2.To check variable is null or not
+
+if(i!=null){
+}

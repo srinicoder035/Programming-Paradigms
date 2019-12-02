@@ -1,0 +1,121 @@
+Language       |         Basic Data Type            |      Derived/Class based Data Type
+------------------------------------------------------------------------------------------
+Basic                      cls 
+                           dim
+                           mat
+                         
+Fortran                    Integer                               structures
+                           Real                                  array
+                           Complex
+                           Cray Pointer
+                           Character Cray Pointer
+                           Character
+                           Logical
+                           Boolean Constants
+
+Pascal                     Scalar-Standard                      Structured 
+                            Integer                               Array
+                            Real                                  Record  
+                            Character                             File
+                            Boolean                               Set  
+                                                                User Defined
+                                                                  Enumerated
+                                                                  Subrange
+                                                                Pointers
+                           
+Cobol                       Numeric
+                            Alphanumeric
+                            Alphabets                 
+
+C                          int                                   array
+                           float                                 structure
+                           char                                  union                       
+                           double                                pointer
+                           void     
+
+C++                        int                                   array
+                           float                                 structure
+                           char                                  union                       
+                           double                                pointer
+                           void                                  string
+                           bool
+                           wide character
+
+Java                       int                                   Integer                                 
+                           float                                 Float
+                           double                                String
+                           char                                  Big Integer
+                           long                                  Double
+                           short                                 Character
+                           boolean                               Boolean
+                           byte                                  Byte
+                                                                 Long
+                                                                 Short
+
+Python                     Numbers
+                           List
+                           Tuple
+                           Strings
+                           Set
+                           Dictionary
+                           Boolean
+                           None
+
+C#                         Value Type
+                             bool
+                             byte
+                             char
+                             decimal
+                             float
+                             double
+                             int
+                             long
+                             sbyte
+                             short
+                             uint
+                             ulong
+                             ushort
+                            Refernce Type
+                             Object
+                             Dynamic
+                             String
+                            Pointer
+
+Perl                        Scalar
+                            Array
+                            Hashes
+
+ Ada                        Integer	
+                            Natural	
+                            Positive	
+                            Long_Integer 
+                            Short_Integer
+                            Float
+                            Short_Float	
+                            Long_Float	
+                            Boolean	
+                            Character	
+                            Wide_Character	
+                            Unsigned_Integer 
+                            Byte_Integer 
+                            Unsigned_Byte_Integer 
+                            Word_Integer 
+                            Unsigned_Word_Integer 
+                            Dword_Integer 
+                            Unsigned_Dword_Integer 
+                            Qword_Integer 
+                            Byte_Boolean 
+                            Word_Boolean 
+                            Dword_Boolean 
+
+Small-talk                  Untyped language which supports    completely user purogative
+                            float
+                            integer
+                            small integer
+                            string
+
+C lite                      int                                 array
+                            boolean
+                            char
+                            float
+                            void

@@ -1,0 +1,31 @@
+Like Python Ada also supports array slicing 
+
+Example
+Ada
+with Text_IO;
+ 
+procedure Main is
+   Text : String := "ABCDE";
+begin
+   Text_IO.Put_Line (Text (2 .. 4));
+end Main;
+
+OUTPUT
+BCD
+
+Python
+a="ABCDE"
+print(a[2:4])
+
+OUTPUT
+CD
+
+Difference with Python
+1.Python uses 0 based indexing while Ada uses 1 based indexing.
+2.Python doesn't include the last index while slicing while Ada includes the last index.
+
+Applications
+1.Finding top 10 ranks in a class.
+2.Finding last 5 ranks in a class.
+3.Finding a substring in a string.
+4.Computations that involve ranges uses slicing.

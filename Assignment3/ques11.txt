@@ -1,0 +1,19 @@
+Examples of R-values that cannot be L-values
+
+1.Expressions Eg- a+b,a-5
+2.Constant values Eg- 1,2,3.5
+3.Any function thata does not return a pointer.
+
+Examples of L-values
+
+1.The name of a variable that points to a memory location
+2.The square bracket [] always yields an L-values
+3.const object (specifically using the const keyword)
+
+All l-values can be treated as r-values because l-values serve as an identity and anything that has an identity must evaluate to a value.
+Since it evaluates to a value, we can say that any l-value is a r-value but the converse doesn't hold good.
+
+Eg
+    int a = 10;
+    int b = a;  // here the lvalue a can be treated as a r-value
+

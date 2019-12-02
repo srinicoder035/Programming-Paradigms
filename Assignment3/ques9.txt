@@ -1,0 +1,15 @@
+
+Why Java doesn't use header files ?
+
+Source code written in Java is simple.
+There is no preprocessor, no #define and related capabilities, no typedef, and absent those features, no longer any need for header files.
+Instead of header files, Java language source files provide the declarations of other classes and their methods.
+A major problem with C and C++ is the amount of context you need to understand another programmer's code: you have to read all related header files, all related #defines, and all related typedefs before you can even begin to analyze a program.
+In essence, programming with #defines and typedefs results in every programmer inventing a new programming language that's incomprehensible to anybody other than its creator, thus defeating the goals of good programming practices.
+
+In Java, you obtain the effects of #define by using constants.
+You obtain the effects of typedef by declaring classes--after all, a class effectively declares a new type.
+You don't need header files because the Java compiler compiles class definitions into a binary form that retains all the type information through to link time.
+
+By removing all this baggage, Java becomes remarkably context-free.
+Programmers can read and understand code and, more importantly, modify and reuse code much faster and easier.

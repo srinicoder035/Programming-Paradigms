@@ -1,0 +1,12 @@
+s(s(X,Y)) --> np(X,U),vp(U,Y).
+np(np(DET,N)) --> det(DET,U),n(U,N).
+vp(vp(V,X)) --> iv(V,X).
+vp(vp(V,X)) --> tv(V,U),np(U,X).
+det(det(the)) --> [the].
+det(det(a)) --> [a].
+det(det(an)) --> [an].
+n(n(giraffe)) --> [giraffe].
+n(n(apple)) --> [apple].
+iv(v(dreams)) --> [dreams].
+tv(v(dreams)) --> [dreams].
+tv(v(eats)) --> [eats].

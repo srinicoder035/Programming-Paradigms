@@ -1,0 +1,159 @@
+A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. 
+They precede the type that they modify.
+We have four different storage classes in a C program
+    Auto
+    Static
+    Extern
+    Register
+
+Auto
+    
+    It is the default storage class in C.
+    It has a scope of that of the block in which it is defined.
+    It has a lifetime within the block in which it is defined.
+    It has a keyword auto.
+    An auto variable need not manadatorily have the keyword infront of it.
+    It is assigned a garbage value by default.
+
+    Snippet
+
+        int main(){
+            int x;    // Auto variable
+
+            {
+                auto int a;    // Auto Variable
+                               // Lifetime and scope is within this block
+            }
+            printf("%d",a); // Error as it is accessed outside it's scope.
+            printf("%d",x); // Valid as it is accessed within scope.
+        }
+
+Static
+
+    It has a scope of that of the block in which it is defined.
+    It has a lifetime as the lifetime of the program.
+    It has a keyword static.
+    It is mandatory to have the keyword static for a static variable.
+    It is assigned to value 0 by default.
+    When the keyword static is used to a global variable, it restricts the scope to the scope of the program.
+    It is used to maintain values between function calls.
+
+    Snippet
+
+        void func(){
+            static int x = 0;  //  static variable 
+            printf("%d ",x);   // Lifetime of the program
+            x++;
+        }
+
+        int main(){
+            
+            int i = 0;
+            for(;i,5;i++){
+                func();
+            }
+            printf("%d",x);    // Throws an error as the scope is the scope of the block in which it is defined.
+            return  0;
+        }
+
+        Output
+        0 1 2 3 4
+        The scope of x is the lifetime of the program and hence it retains the values and hence prints 0 to 4
+
+Register
+    
+    It has a scope of that of the block in which it is defined.
+    It has a lifetime within the block in which it is defined.
+    It has a keyword register.
+    It is mandatory to have the keyword register for a register variable.
+    It is assigned a garbage value by default.
+    The variable will be stored in the register instead of RAM
+    The variable must have a maximum size as that of the RAM and cannot have unary operator & for its variable
+    It provides fast access.
+    The keyword register is just a request to a compiler to make it stored in a register but it is the discretion of the compiler to decide based on constarints.
+
+    Snippet
+
+        int main(){
+            register int x;    // Register variable
+            scanf("%d",&x);    // Error as it cannot be used with an &.
+            {
+                register int a;    // Register Variable
+                                   // Lifetime and scope is within this block
+            }
+            printf("%d",a); // Error as it is accessed outside it's scope.
+            printf("%d",x); // Valid as it is accessed within scope.
+        }
+
+Extern
+
+    It has a keyword extern.
+    It is mandatory to have the keyword extern for a extern variable.
+    It is assigned to value 0 by default.
+    All the functions in C are by default extern and is not mandatory to specify extern for function.
+    The visibility of extern is the lifetime of a program in case of functions.
+    The scope of an extern variable is that of a file scope.
+    The lifetime of an extern variable is the lifetime of the program.
+    When extern is used with a variable, it’s only declared not defined.
+    As an exception, when an extern variable is declared with initialization, it is taken as the definition of the variable as well.
+
+
+    Snippet
+
+      1.extern int var;        // Extern variable is decalred but not defined so no memory location is allocated to it. 
+        int main(){
+            return 0;
+        }
+        Status : No error
+
+      2.extern int var;
+        int main(){
+            x = 2;             // Assigning a value 2 to a variale whose memory is not yet allocated
+            return 0;
+        }
+        Status: Error
+
+      3.extern int var = 0;   // Extern variable is declared and defined and hence memory is allocated.
+        int main(){
+            x = x + 5;         // Incrementing the value by 5 and memory is allocated alreadyy here.
+            return 0;
+        }
+        Status: No error
+
+      4.prog1.c
+        #include<stdio.h>
+        #include "prog2.c"
+        int main()
+        {
+            printf("%d",var);
+            return 0;
+        }
+        prog2.c
+        #include<stdio.h>
+        extern int var = 5;
+
+        Compilation
+        gcc prog1.c
+        
+        Output
+        5
+
+      5.prog1.c
+        #include<stdio.h>
+        int main()
+        {
+            printf("%d",var);
+            return 0;
+        }
+        prog2.c
+        #include<stdio.h>
+        extern int var = 5;
+
+        Compilation 
+        gcc prog1.c prog2.c
+        
+        Output
+        5
+
+    Note: The example 4 and 5 have a difference in the sense that prog2 is not included in prog1 in example 5 but is included in the example 4.
+          These are 2 different ways of linking file

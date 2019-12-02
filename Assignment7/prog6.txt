@@ -1,0 +1,14 @@
+Ex 14.28
+
+(a) The snippet considered is not an optimized code.
+    Here a lot of computations are repeated again and again and hence the function for a larger numbers becomes very slow and inefficient.
+    So the speed of computation decreases as the value of n increases.
+    Here, fib(1) is computed 50 times ,fib(2) is computed 49 times and so on
+    Total computations here would be (50*51)/2 + 50 . The plus 50 is for fib(0) computation
+    Due to more computation and recursive nature there can be a stack overflow.
+
+(b) The snippet is an optimized version of computing fibanocci
+    Here at every state, the nth fibanocci and the next fibanocci are calculated and stord as tuple.
+    Recomputation does not take place here and hence it is time efficient.
+    There would be a total of 50 + 50 calls (one 50 for fib fn and another 50 for add function).
+    There is very less possibility for stack overflow in this algorithm for numbers of the kind that we are considering.

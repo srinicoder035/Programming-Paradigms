@@ -1,0 +1,108 @@
+Enums in C/C++
+
+Enumeration (or enum) is a user defined data type in C. It is mainly used to assign names to integral constants.
+These names make a program easy to read and maintain.
+
+Rules
+
+1.The value assigned to enum names must be some integeral constant, i.e., the value must be in range from minimum possible integer value to maximum possible integer value.
+2.All enum constants must be unique in their scope
+3.Two enum names can have same value
+4.If we do not explicitly assign values to enum names, the compiler by default assigns values starting from 0.
+5.We can assign values to some name in any order. All unassigned names get value as value of previous name plus one.
+
+Examples
+1.
+
+enum state  {working, failed}; 
+enum result {failed, passed}; 
+  
+int main()  { return 0; } 
+
+This shows compilation error as failed has a previous declaration.
+
+2.
+#include<stdio.h>   
+enum year{Jan, Feb, Mar, Apr, May, Jun, Jul,  
+          Aug, Sep, Oct, Nov, Dec}; 
+int main() 
+{ 
+   int i; 
+   for (i=Jan; i<=Dec; i++)       
+      printf("%d ", i); 
+        
+   return 0; 
+} 
+OUTPUT
+0 1 2 3 4 5 6 7 8 9 10 11
+
+3.
+#include <stdio.h> 
+enum day {sunday = 1, monday, tuesday = 5, 
+          wednesday, thursday = 10, friday, saturday}; 
+  
+int main() 
+{ 
+    printf("%d %d %d %d %d %d %d", sunday, monday, tuesday, 
+            wednesday, thursday, friday, saturday); 
+    return 0; 
+} 
+
+OUTPUT
+1 2 5 6 10 11 12
+
+Enum in Java
+
+Java Enum is a type like class and interface and can be used to define a set of Enum constants. 
+Enum constants are implicitly static and final and you can not change their value once created.
+Enum in Java provides type-safety and can be used inside switch statement like int variables. 
+Enums in Java are type-safe and has their own namespace.
+It means your enum will have a type and you can not assign any value other than specified in Enum Constants.
+Enum can implement an interface in Java
+
+Examples
+
+1.Not user defined values
+public enum Currency {
+    PENNY, NICKLE, DIME, QUARTER
+};
+Currency coin = Currency.PENNY;
+
+2.User defined values for enum
+public enum Currency{
+    PENNY(1), NICKLE(5), DIME(10), QUARTER(25)
+    private int value;
+    private Currency(int value){
+        this.value = value;
+    }
+};
+Currency coin = Currency.PENNY;
+Here new method should not be used for the construction of enums.
+
+3.Enum can be used with switch statements
+Currency usCoin = Currency.DIME;
+    switch (usCoin) {
+            case PENNY:
+                    System.out.println("Penny coin");
+                    break;
+            case NICKLE:
+                    System.out.println("Nickle coin");
+                    break;
+            case DIME:
+                    System.out.println("Dime coin");
+                    break;
+            case QUARTER:
+                    System.out.println("Quarter coin");
+    }
+
+
+Differences between Enum in C++ and Java
+
+                   C++                                  |                    Java 
+
+1. In C++ enum is a named set of integral constants     |  In Java enum is like a named instance of a class
+2. In C++ the conversion of enum to integer values      |  In Java conversion must be explicit
+   must be implicit.                                    |         
+3. In C++ enum does not have special support systems    |  Java has support for enum like EnumSet and EnumMap 
+   in its library                                       |  for organizing enums internally.   
+4. There is no provison to define methods for enum      |  We can define methods for enum in Java.

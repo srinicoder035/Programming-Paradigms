@@ -1,0 +1,48 @@
+The languages considered here are C and Python
+
+Simplicity and Readability
+
+In terms of simplicity and readibility Python is the best langauage in the field of programming.It has simple
+and easy syntax and it is very easy to understand even from the view of an outsider and hence it is way ahead 
+in terms of readability and simplicity than C.
+
+Clarity about Binding
+
+In terms of binding C is much more well defined and better than Python.C is a static typed language and hence it
+is much more clear in binding and everything is resolved in compile time whereas Python is a dynamic typed language
+and it uses an interpreter and everything is resolved in run time and hence the running time of C program is far less 
+than running time of Python.
+
+Reliability 
+
+In terms of reliability Python is a much more reliable language than C because in C we have a lot of problems 
+fundamentally like the dangling else and memory leak which may change the output for the same input when run 
+again and again (mainly memory leak does this).Support program verification and testing is furthermore much 
+more easy and reliable in Python than in C.Python has a much simpler syntax and easier to design parser than C 
+because there are some special cases in C with a lot of exceptions(for example one line loop doesn't require 
+braces).
+
+Support 
+
+In terms of support both C and Python have considerable support in the internet but in case of more complicated
+and realtime scenarios, Python has much larger support across domains and is of atmost ease for any programmer 
+to refer to and build his solution towards a problem considered.
+
+Abstraction 
+
+In terms of abstraction it is easy to conclude that Python is far more abstract language than C language.
+The presence of Classes and Polymorphism are very powerful concepts which provide abstract features to Python.
+The presence of name mangling provides data abstraction and the above mention concepts provide function abstractions.
+
+Orthogonality
+
+In terms of Orthogonality Python is more orthogonal than C.
+
+Efficient Implementation
+
+In terms of efficiency of implementation there are a few factors that need to be considered.
+If we consider runtime, then C program runs 3 times faster than an equivalent Python program.
+In terms of program load time, C is faster than Python.
+In terms of compile time,C is faster than Python because any compiler is faster than any interpreter.
+In terms of program writing time, Python is easier than C.
+On the whole we can say that Python is easier to type but the more efficient language in terms of runtime is C.
